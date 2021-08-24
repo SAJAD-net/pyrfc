@@ -97,5 +97,8 @@ def env():
 
 def run():
     args = sys.argv
-    check(args) if len(args) > 2  else env()
+    try:
+        check(args) if len(args) > 1  else env()
+    except:
+        _help()
 run()
