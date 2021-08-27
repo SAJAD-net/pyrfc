@@ -83,7 +83,7 @@ def comcheck(com):
         exit()
     else:
         print("pyrfc e ~ command not found !")
-        sleep(1)
+        sleep(0.7)
         env()
 
 #########################################
@@ -91,7 +91,7 @@ def env():
     while True:
         os.system("clear")
         logo()
-        pyrf=input("pyrfc   ").split(" ")
+        pyrf=input("PYRFC    ").split(" ")
         comcheck(pyrf)        
 ############################################
 
@@ -100,5 +100,8 @@ def run():
     try:
         check(args) if len(args) > 1  else env()
     except:
-        _help()
+        if len(args) != 1:
+            _help()
+        else:
+            exit()
 run()
