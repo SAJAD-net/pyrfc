@@ -91,7 +91,7 @@ def env():
     while True:
         os.system("clear")
         logo()
-        pyrf=input("PYRFC    ").split(" ")
+        pyrf=input("PYRFC X ").split(" ")
         comcheck(pyrf)        
 ############################################
 
