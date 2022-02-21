@@ -14,4 +14,4 @@
 
     git clone https://github.com/SAJAD-net/pyrfc.git
     cd pyrfc
-    python3 pyrfc.py -h #To display the 'help'
+    python3 pyrfc.py -h #To display the 'PYRFC' help
