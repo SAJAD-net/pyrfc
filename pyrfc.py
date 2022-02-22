@@ -35,9 +35,10 @@ def make(rfcc, num, read):
     rff.close()
 
     print(f"PYRFC mes ~ rfc_{num} successfully downloaded !")
-    
+
     if read:
         less_rfc(num)
+
     back()
 ##########################################
 #Download & displays the rfc number [num]
@@ -95,8 +96,13 @@ def comcheck(com):
     elif validcommand == "quit":
         sys.exit()
     else:
+<<<<<<< HEAD
         print(f"PYRFC err ~ '{validcommand}' command not found !")
         back()
+=======
+        print("pyrfc e ~ command not found !")
+        sleep(0.7)
+>>>>>>> 135f33f6fa69d2590ce8c32e6bfd153b38bfbb18
         env()
 
 ###########################################
@@ -106,12 +112,27 @@ def env():
         os.system("clear")
         logo()
         pyrf=input("PYRFC X ").split(" ")
+<<<<<<< HEAD
         comcheck(pyrf)
+=======
+        comcheck(pyrf)        
+>>>>>>> 135f33f6fa69d2590ce8c32e6bfd153b38bfbb18
 ############################################
 
 def main():
     args = sys.argv
+<<<<<<< HEAD
     argcheck(args) if len(args) > 1 else env()
 
 if __name__ == "__main__":
     main()
+=======
+    try:
+        check(args) if len(args) > 1  else env()
+    except:
+        if len(args) != 1:
+            _help()
+        else:
+            exit()
+run()
+>>>>>>> 135f33f6fa69d2590ce8c32e6bfd153b38bfbb18
