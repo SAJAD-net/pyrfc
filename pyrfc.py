@@ -17,6 +17,7 @@ def logo():
 """
     print(logo)
 
+########################################
 #Displays the rfc number [num] with 'less' command
 def less_rfc(num):
     os.system(f"less PYRFC/rfc_{num}")
@@ -40,6 +41,7 @@ def make(rfcc, num, read):
         less_rfc(num)
 
     back()
+
 ##########################################
 #Download & displays the rfc number [num]
 def pyrfc(num, read=False):
@@ -51,6 +53,7 @@ def pyrfc(num, read=False):
         print(e)
         print("PYRFC err ~ faild, check your internet connection !")
         back()
+
 #########################################
 #Displays the rfc number [num] if exists
 def read(num):
@@ -96,13 +99,8 @@ def comcheck(com):
     elif validcommand == "quit":
         sys.exit()
     else:
-<<<<<<< HEAD
         print(f"PYRFC err ~ '{validcommand}' command not found !")
         back()
-=======
-        print("pyrfc e ~ command not found !")
-        sleep(0.7)
->>>>>>> 135f33f6fa69d2590ce8c32e6bfd153b38bfbb18
         env()
 
 ###########################################
@@ -112,27 +110,16 @@ def env():
         os.system("clear")
         logo()
         pyrf=input("PYRFC X ").split(" ")
-<<<<<<< HEAD
         comcheck(pyrf)
-=======
-        comcheck(pyrf)        
->>>>>>> 135f33f6fa69d2590ce8c32e6bfd153b38bfbb18
-############################################
 
+############################################
 def main():
     args = sys.argv
-<<<<<<< HEAD
-    argcheck(args) if len(args) > 1 else env()
-
-if __name__ == "__main__":
-    main()
-=======
     try:
-        check(args) if len(args) > 1  else env()
+        argcheck(args) if len(args) > 2  else env()
     except:
         if len(args) != 1:
             _help()
-        else:
-            exit()
-run()
->>>>>>> 135f33f6fa69d2590ce8c32e6bfd153b38bfbb18
+
+if __name__ == "__main__":
+    main()
