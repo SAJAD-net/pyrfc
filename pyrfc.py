@@ -19,7 +19,7 @@ def logo():
 
 #Displays the rfc number [num] with 'less' command
 def less_rfc(num):
-    os.system(f"less pyrfc/rfc_{num}")
+    os.system(f"less PYRFC/rfc_{num}")
 
 #########################################
 def back():
@@ -30,15 +30,15 @@ def back():
 def make(rfcc, num, read):
     if not os.path.exists("PYRFC"):
         os.mkdir("PYRFC")
-    with open(f"pyrfc/rfc_{num}", "w") as rff:
+    with open(f"PYRFC/rfc_{num}", "w") as rff:
         rff.write(rfcc)
     rff.close()
 
     print(f"PYRFC mes ~ rfc_{num} successfully downloaded !")
-
+    
     if read:
         less_rfc(num)
-
+    back()
 ##########################################
 #Download & displays the rfc number [num]
 def pyrfc(num, read=False):
@@ -46,13 +46,14 @@ def pyrfc(num, read=False):
         url=f"http://www.ietf.org/rfc/rfc{num}.txt"
         rfcf=urlopen(url).read().decode()
         make(rfcf, num, read)
-    except:
+    except Exception as e:
+        print(e)
         print("PYRFC err ~ faild, check your internet connection !")
         back()
 #########################################
 #Displays the rfc number [num] if exists
 def read(num):
-    if not os.path.exists(f"pyrfc/rfc_{num}"):
+    if not os.path.exists(f"PYRFC/rfc_{num}"):
         print(f"PYRFC err ~ rfc {num} isn't exists !")
         d = input("PYRFC que ~ do you want to download it? [y/n] ~ ").upper()
         if d == "Y":
