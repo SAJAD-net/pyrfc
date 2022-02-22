@@ -20,5 +20,5 @@ env commands:
 command-line commands:
 	-r 	   {num} ~ displays rfc number {num}
 	-d	   {num} ~ downloads the rfc number {num}
-	-dr    {num} ~ download & displays the rfc number {num}
-	-h           ~ display the help
+	-dr        {num} ~ download & displays the rfc number {num}
+	-h               ~ display the help
